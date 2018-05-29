@@ -22,15 +22,16 @@ app.use(
   })
 );
 
-const people = [{
-  name: 'Neill',
-  age: 31
-},
+const people = [
+  {
+    name: 'Neill',
+    age: 31
+  },
 
-{
-  name: 'Hannah',
-  age: 29
-}
+  {
+    name: 'Hannah',
+    age: 29
+  }, {name: 'Charlie', age: 6}
 ];
 
 app.get('/family', (req, res) => {
