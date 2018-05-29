@@ -6,7 +6,7 @@ const morgan = require('morgan');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
-// const {dbConnect} = require('./db-knex');
+
 
 const app = express();
 
@@ -21,6 +21,21 @@ app.use(
     origin: CLIENT_ORIGIN
   })
 );
+
+const people = [{
+  name: 'Neill',
+  age: 31
+},
+
+{
+  name: 'Hannah',
+  age: 29
+}
+];
+
+app.get('/family', (req, res) => {
+  res.json(people);
+});
 
 function runServer(port = PORT) {
   const server = app
