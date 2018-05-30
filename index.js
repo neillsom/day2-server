@@ -23,7 +23,7 @@ app.use(
 );
 
 const styles = [
-  {name: 'Long Outward Curls With One Side Tucked Behind Ear' },
+  { name: 'Long Outward Curls With One Side Tucked Behind Ear' },
   { name: 'Highlighted Messy Updo With Long Side-Swept Bang' },
   { name: 'Long Layered Bob With Fringes And Razored Ends' },
   { name: 'Smooth Semi-High Ponytail With Hair Wrap' },
@@ -37,7 +37,7 @@ const styles = [
 
 app.get('/styles', (req, res) => {
   res.json(styles);
-}); q
+}); 
 
 function runServer(port = PORT) {
   const server = app
