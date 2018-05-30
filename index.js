@@ -22,21 +22,22 @@ app.use(
   })
 );
 
-const people = [
-  {
-    name: 'Neill',
-    age: 31
-  },
-
-  {
-    name: 'Hannah',
-    age: 29
-  }, {name: 'Charlie', age: 6}
+const styles = [
+  {name: 'Long Outward Curls With One Side Tucked Behind Ear' },
+  { name: 'Highlighted Messy Updo With Long Side-Swept Bang' },
+  { name: 'Long Layered Bob With Fringes And Razored Ends' },
+  { name: 'Smooth Semi-High Ponytail With Hair Wrap' },
+  { name: 'Messy Low Side Bun With Soft Side-Swept Bang' },
+  { name: 'High Topknot With A Slightly Messy Finish' },
+  { name: 'Flowery Hairdo With Texture And Messy Finish' },
+  { name: 'Long Spiral Curls With Single Side Braid' },
+  { name: 'Relaxed Center-Parted Brown Waves With Highlights' },
+  { name: 'Straight Layered Blonde Hair With Side-Swept Bang' }
 ];
 
-app.get('/family', (req, res) => {
-  res.json(people);
-});
+app.get('/styles', (req, res) => {
+  res.json(styles);
+}); q
 
 function runServer(port = PORT) {
   const server = app
