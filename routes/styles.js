@@ -19,36 +19,14 @@ const styles = [
 
 // Get all
 router.get('/', (req, res, next) => {
-  // const { searchTerm } = req.query;
-  //
-  // const userId = req.user.id;
-  //
-  // let filter = { userId };
-  //
-  // if (searchTerm) {
-  //   const re = new RegExp(searchTerm, 'i');
-  //   filter.title = { $regex: re };
-  // }
 
-  // Style.find(filter)
-  //   .populate('')
-  //   .sort('created')
-  //   .then(results => {
-  //     res.json(results);
-  //   })
-  //   .catch(err => {
-  //     next(err)
-  //   });
-
-  // Style.find()
-  //   .then(results => {
-  //     res.json(results);
-  //   })
-  //   .catch(err => {
-  //     next(err)
-  //   });
-
-    res.json(styles)
+  Style.find()
+    .then(results => {
+      res.json(results);
+    })
+    .catch(err => {
+      next(err)
+    });
 
 });
 

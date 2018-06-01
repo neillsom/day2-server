@@ -12,7 +12,7 @@ const styleSchema = new mongoose.Schema({
 styleSchema.set('toObject', {
   transform: function (doc, ret) {
     ret.id = ret._id;
-    delete red._id;
+    delete ret._id;
     delete ret.__v;
   }
 });
