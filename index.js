@@ -3,10 +3,14 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+// const passport = require('passport
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
 
+const stylesRouter = require('./routes/styles');
+const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -22,22 +26,13 @@ app.use(
   })
 );
 
-const styles = [
-  { name: 'Long Outward Curls With One Side Tucked Behind Ear' },
-  { name: 'Highlighted Messy Updo With Long Side-Swept Bang' },
-  { name: 'Long Layered Bob With Fringes And Razored Ends' },
-  { name: 'Smooth Semi-High Ponytail With Hair Wrap' },
-  { name: 'Messy Low Side Bun With Soft Side-Swept Bang' },
-  { name: 'High Topknot With A Slightly Messy Finish' },
-  { name: 'Flowery Hairdo With Texture And Messy Finish' },
-  { name: 'Long Spiral Curls With Single Side Braid' },
-  { name: 'Relaxed Center-Parted Brown Waves With Highlights' },
-  { name: 'Straight Layered Blonde Hair With Side-Swept Bang' }
-];
 
-app.get('/styles', (req, res) => {
-  res.json(styles);
-}); 
+
+// app.use('/', authRouter);
+app.use('/styles', stylesRouter);
+app.use('/users', usersRouter);
+
+
 
 function runServer(port = PORT) {
   const server = app
