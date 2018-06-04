@@ -11,11 +11,6 @@ const router = express.Router();
 // Protect endpoints with jwtStrategy
 // router.use('/', passport.authenticate('jwt', {session: false, failWithError: true}));
 
-const styles = [
-  { name: 'Long Outward Curls With One Side Tucked Behind Ear' },
-  { name: 'Highlighted Messy Updo With Long Side-Swept Bang' },
-  { name: 'Straight Layered Blonde Hair With Side-Swept Bang' }
-];
 
 // Get all
 router.get('/', (req, res, next) => {
