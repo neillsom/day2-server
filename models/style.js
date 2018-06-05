@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
 const styleSchema = new mongoose.Schema({
   title: { type: String },
   content: { type: String },
-  created: { type: Date, default: Date.now }
+  created: { type: Date, default: Date.now },
+  imgUrl: { type: String }
 });
 
 styleSchema.set('toObject', {

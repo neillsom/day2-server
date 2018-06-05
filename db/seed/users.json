@@ -3,18 +3,21 @@
     "_id": "333333333333333333333300",
     "fullname": "User Zero",
     "username": "user0",
-    "password": "password"
+    "password": "password",
+    "favorites": ["000000000000000000000000", "000000000000000000000001", "000000000000000000000002"]
   },
   {
     "_id": "333333333333333333333301",
     "fullname": "User One",
     "username": "user1",
-    "password": "password"
+    "password": "password",
+    "favorites": ["000000000000000000000001", "000000000000000000000000"]
   },
   {
     "_id": "333333333333333333333302",
     "fullname": "User Two",
     "username": "user2",
-    "password": "password"
+    "password": "password",
+    "favorites": ["000000000000000000000002"]
   }
 ]
