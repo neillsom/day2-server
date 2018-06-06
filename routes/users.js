@@ -6,6 +6,29 @@ const User = require('../models/user');
 const router = express.Router();
 
 /* ========== POST/CREATE AN ITEM ========== */
+
+
+//favorite style with this id
+
+router.post('/:userId/styles/:styleId', (req, res, next) => {
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 router.post('/', (req, res, next) => {
 
     const requiredFields = ['username', 'password'];
