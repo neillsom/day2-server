@@ -18,6 +18,6 @@
     "fullname": "User Two",
     "username": "user2",
     "password": "password",
-    "favorites": ["000000000000000000000002"]
+    "favorites": []
   }
 ]
